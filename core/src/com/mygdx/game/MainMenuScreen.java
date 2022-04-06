@@ -27,8 +27,9 @@ public class MainMenuScreen implements Screen {
 		game.batch.setProjectionMatrix(camera.combined);
 		game.batch.begin();
 		game.batch.draw(background, 0, 0);
-		game.font.draw(game.batch, "Welcome to Barry's garden! ", 320,  300);
-		game.font.draw(game.batch, "Collect more than 50 vegetables to win!", 300, 250);
+		game.font.draw(game.batch, "Welcome to Lentyaevo! ", 320,  300);
+		game.font.draw(game.batch, "Robbie put sugar in the food Sportacus", 300, 250);
+		game.font.draw(game.batch, "Collect more than 50 fruits to make sportacus come back to normal!", 300, 200);
 		game.batch.end();
 
 		if (Gdx.input.isTouched()) {

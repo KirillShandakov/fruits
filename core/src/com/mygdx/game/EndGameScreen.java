@@ -10,10 +10,10 @@ public class EndGameScreen implements Screen {
     final Drop game;
     OrthographicCamera camera;
     Texture background;
-    int collectedVegetables;
-    EndGameScreen(final Drop gam, int collectedVegetables){
+    int collectedFruits;
+    EndGameScreen(final Drop gam, int collectedFruits){
         game = gam;
-        this.collectedVegetables = collectedVegetables;
+        this.collectedFruits = collectedFruits;
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 800, 480);
     }
@@ -26,7 +26,7 @@ public class EndGameScreen implements Screen {
         game.batch.setProjectionMatrix(camera.combined);
 
         game.batch.begin();
-        if (this.collectedVegetables >= 50){
+        if (this.collectedFruits >= 50){
             background = new Texture("pictures/goodend.png");
         } else {
             background = new Texture("pictures/badend.png");
